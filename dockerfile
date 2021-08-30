@@ -7,7 +7,8 @@ RUN apt-get install -y iproute2
 RUN apt-get install -y nano
 RUN apt-get install -y python3
 RUN apt-get install -y pip
-RUN pip3 install visualpython jupyter_contrib_nbextensions numpy pandas matplotlib seaborn
+RUN pip3 install visualpython jupyter_contrib_nbextensions numpy pandas matplotlib seaborn plotly
+RUN pip3 install "nbconvert<6"
 RUN useradd -m visualpy
 USER visualpy
 RUN jupyter contrib nbextension install --user
